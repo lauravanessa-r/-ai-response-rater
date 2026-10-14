@@ -1,0 +1,16 @@
+[
+  {
+    "id": "task-01",
+    "category": "Factual accuracy",
+    "prompt": "At what temperature does water boil at sea level, and how does altitude affect it?",
+    "responseA": "At sea level, water boils at 100 °C (212 °F).\n\nAt higher altitudes the air pressure is lower, so water boils at a lower temperature. For example, in a city at about 2,600 m above sea level, water boils at roughly 91 °C. This is why food can take longer to cook in the mountains.",
+    "responseB": "Water boils at 100 °C (212 °F) at sea level. At higher altitudes the air pressure is higher, so the boiling point increases and water needs more heat before it starts to boil."
+  },
+  {
+    "id": "task-02",
+    "category": "Instruction following",
+    "prompt": "Summarize the following paragraph in exactly two sentences:\n\n\"Photosynthesis is the process plants use to turn light energy into chemical energy. Using sunlight, water and carbon dioxide, plants produce glucose, which they use for growth, and release oxygen as a by-product. This process takes place mainly in the leaves, inside structures called chloroplasts, and it is the basis of most food chains on Earth.\"",
+    "responseA": "Photosynthesis is how plants convert sunlight, water and carbon dioxide into glucose for growth, releasing oxygen as a by-product. It happens mainly in the chloroplasts of leaves and supports most food chains on Earth.",
+    "responseB": "Photosynthesis turns light energy into chemical energy. Plants use sunlight, water and carbon dioxide to make glucose. They release oxygen. It happens in the chloroplasts and supports most food chains."
+  }
+]
