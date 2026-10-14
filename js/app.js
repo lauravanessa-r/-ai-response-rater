@@ -22,6 +22,7 @@ const PREFERENCES = [
 ];
 
 const MIN_JUSTIFICATION = 30;
+const MAX_TIE_GAP = 1; // max difference between averages to allow "About the same"
 const STORAGE_KEY = "ai-response-rater:v1";
 
 // ---------- State ----------
@@ -173,6 +174,10 @@ function readForm() {
     const winner = PREFERENCES.find((p) => p.value === preference).winner;
     if ((winner === "A" && avgA < avgB) || (winner === "B" && avgB < avgA)) {
       errors.push(`Your preference (${winner}) does not match the rubric: A averages ${avgA.toFixed(2)} and B averages ${avgB.toFixed(2)}. Please review your scores.`);
+    }
+    // A tie only makes sense when both responses received similar scores.
+    if (winner === "tie" && Math.abs(avgA - avgB) >= MAX_TIE_GAP) {
+      errors.push(`You chose "About the same", but the averages are far apart (A ${avgA.toFixed(2)}, B ${avgB.toFixed(2)}). Please review your scores or your preference.`);
     }
   }
 
